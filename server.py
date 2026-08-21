@@ -9,10 +9,10 @@ import html
 # SERVER CONFIGURATION
 # ========================================
 
-HOST = "127.0.0.1"
+HOST = os.environ.get("HOST", "127.0.0.1")
 
 # You can change the port here
-PORT = 8080
+PORT = int(os.environ.get("PORT", "8080"))
 
 BASE_DIR = os.path.dirname(__file__)
 
